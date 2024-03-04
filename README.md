@@ -2,9 +2,9 @@ Hello fellow interns! <br>
 
 As you can see there are two folders in this repository. <br> <br>
   1. python_implementation - this is a demo I've set up to show how to use the NewsAPI API. It is functional and can be tested by:<br>
-    - installing the required dependencies
-    - running app.py
-    - searching the url "localhost:5000/topic/your_topic_here" where you replace your_topic_here with any news topic.<br><br>
+  - installing the required dependencies
+  - running app.py
+  - searching the url "localhost:5000/topic/your_topic_here" where you replace your_topic_here with any news topic.<br><br>
   2. React/my-app - for now, an empty react project for us to get started with.<br><br>
 
 As of now the python_implementation section is doing some of the things we want it to, but we have a long way to go. 
