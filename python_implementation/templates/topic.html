@@ -2,20 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>News on {{ topic }}</title>
+    <title>Keyword Topics</title>
+    <style>
+        .keyword-widget {
+            margin-bottom: 20px;
+        }
+        .keyword-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .articles-container {
+            display: flex;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+        .article {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-right: 16px;
+            flex: 0 0 auto;
+            width: 300px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>News on {{ topic | capitalize }}</h1>
-    {% for article in articles %}
-        <div>
-            <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
-            {% if article.imageUrl %}
-                <img src="{{ article.imageUrl }}" alt="Article Image" style="max-width: 100%; height: auto;">
-            {% endif %}
-            <p>{{ article.description }}</p>
+    {% for keyword, articles in keyword_articles.items() %}
+        <div class="keyword-widget">
+            <div class="keyword-title">{{ keyword | capitalize }}</div>
+            <div class="articles-container">
+
+    <! -- ============================== limit 3 articles per topic, feel free to change ====================== -->
+
+                {% for article in articles[:3] %}
+                    <div class="article">
+                        <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+                        {% if article.imageUrl %}
+                            <img src="{{ article.imageUrl }}" alt="Article Image">
+                        {% endif %}
+                        <p>{{ article.description }}</p>
+                    </div>
+                {% else %}
+                    <p>No articles found for {{ keyword }}.</p>
+                {% endfor %}
+            </div>
         </div>
-    {% else %}
-        <p>No articles found.</p>
     {% endfor %}
 </body>
 </html>
