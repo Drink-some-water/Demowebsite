@@ -9,7 +9,7 @@ API_KEY = '31e52b26ece14e65a65c0ebfdf205032'
 
 def find_keywords(articles):
     #combine titles and descriptions
-    text_for_keywords = " ".join([article["title"] + ". " + article["description"] for article in articles])
+    text_for_keywords = " ".join([str(article.get("title", "")) + ". " + str(article.get("description", "")) for article in articles]) #added check for empty strings
     #keyword extractor parameters
     kw_extractor = yake.KeywordExtractor(lan="en",  # english
                                             n=2,       # two word phrases
