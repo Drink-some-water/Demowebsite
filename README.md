@@ -1,5 +1,7 @@
 Hello fellow interns! <br>
 
+<br>==================CURRENT README IS OUTDATED, WILL FIX SOON=============<br>
+
 As you can see there are two folders in this repository. <br> <br>
   1. python_implementation - this is a demo I've set up to show how to use the NewsAPI API. It is functional and can be tested by:<br>
   - installing the required dependencies
