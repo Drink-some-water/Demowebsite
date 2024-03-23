@@ -42,7 +42,7 @@ def show_topic(topic_name):
 
 @app.route('/')
 def hello():
-    return 'Hello, World!'
+    return 'Site is running!'
 
 
 if __name__ == '__main__':
