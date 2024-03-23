@@ -8,6 +8,22 @@ import os
 from datetime import datetime, timedelta
 
 
+def cache_api_call():
+    print('Not implemented')
+
+
+def extract_entities():
+    print('Not implemented')
+
+
+def get_geo_coordinates():
+    print('Not implemented')
+
+
+def save_rss_feed():
+    print('Not implemented')
+
+
 def get_earliest_publish_date():
     now = datetime.now()
     # Subtract 24 hours from the current datetime
@@ -68,4 +84,4 @@ if __name__ == '__main__':
 #    offset = 10 # int | The number of news to skip in range [0,1000] (optional)
 #    number = 1 # int | The number of news to return in range [1,100] (optional)
 #    sort = 'publish-time' # str | The sorting criteria. (optional)
-#    sort_direction = 'desc' # str | Whether to sort ascending or descending. (optional)
+#    sort_direction = 'desc' # str | Whether to sort ascending or descending. (optional)io 
